@@ -1,0 +1,29 @@
+local ScreenGui = instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextBox = Instance.new("TextBox")
+
+ScreenGui.Name = "ScreenGui"
+ScreenGui.Parent = game:WaitForChild("CoreGui")
+
+Frame.Name = "Frame"
+Frame.Parent = ScreenGui
+Frame.Size = UDim2.new(0.2, 0, 0.2, 0)
+Frame.BackGroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 1.000
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.Draggable = true
+
+TextBox.Name = "TextBox"
+TextBox.Parent = Frame
+TextBox.Font = Enum.Font.Gotham
+TextBox.Size = UDim2.new(0.25, 0, 0.25, 0)
+TextBox.TextColor3 = Color3.new(255, 255, 255)
+TextBox.Transparency = 1.000
+TextBox.PlaceHolderText = "Enter Number!"
+TextHox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextWrapped = true
+
+while task.wait() do
+  Frame.BorderColor3 = Color3.fromHSV(tick()%5/5,1,1)
+end
